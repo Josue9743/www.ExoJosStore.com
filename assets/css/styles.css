@@ -1024,3 +1024,6 @@ margin-bottom:0px;
     column-gap: 5rem;
   }
 }
+figure {
+  margin: 0;
+}
