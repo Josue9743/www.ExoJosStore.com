@@ -90,7 +90,7 @@ themeButton.addEventListener('click', () => {
 })
 
 /*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
+/*const sr = ScrollReveal({
     distance: '30px',
     duration: 1800,
     reset: true,
@@ -152,7 +152,7 @@ balls.forEach((el, i, ra) => {
       easing: "ease-in-out"
     }
   );
-});
+});*/
 
 
 
