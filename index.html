@@ -192,12 +192,60 @@
 	
 </div>
 <div class=accessory__content>
-<img src=assets/img/estar3.png class=accessory__img draggable=false>
-<h3 class=accessory__title>Rage Akosai loader</h3>
-<span class=accessory__category>Available</span>
-<span class=accessory__preci>FREE</span>
-<a href="Rageakosai.rar" class="button accessory__button"><i class='fas fa-download'></i></a>
+	<h6><span class="badge bg-secondary">New</span></h6>
+	<img src="assets/img/modifier-code-wordpress.jpg" id="imageGalleryImg" alt="" style="display: block;">
+	<h3 class=accessory__title>Code website</h3>
+	<span class=accessory__category>Available</span>
+	<span class=accessory__preci>79,00 €</span>
+	<div id="smart-button-container">
+		<div style="text-align: center;">
+		  <div id="paypal-button-container"></div>
+		</div>
+	  </div>
+	<script src="https://www.paypal.com/sdk/js?client-id=Aa6gq5jBSTxwxH663Vl8BMepoRUHEavoWOwhfS3f1YUP_Akst3kcxih1n7oP1-4fkqnwtFb_Tzqj78QJ&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+	<script>
+	  function initPayPalButton() {
+		paypal.Buttons({
+		  style: {
+			shape: 'pill',
+			color: 'silver',
+			layout: 'vertical',
+			label: 'checkout',
+			
+		  },
+  
+		  createOrder: function(data, actions) {
+			return actions.order.create({
+			  purchase_units: [{"description":"We code a website of your choice for your channel or other every month\n","amount":{"currency_code":"USD","value":1}}]
+			});
+		  },
+  
+		  onApprove: function(data, actions) {
+			return actions.order.capture().then(function(orderData) {
+			  
+			  // Full available details
+			  console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+  
+			  // Show a success message within this page, e.g.
+			  const element = document.getElementById('paypal-button-container');
+			  element.innerHTML = '';
+			  element.innerHTML = '<h3>Thank you for your payment!</h3>';
+  
+			  // Or go to another URL:  actions.redirect('thank_you.html');
+			  
+			});
+		  },
+  
+		  onError: function(err) {
+			console.log(err);
+		  }
+		}).render('#paypal-button-container');
+	  }
+	  initPayPalButton();
+	</script>
+
 </div>
+
 <div class=accessory__content>
 	<h6><span class="badge bg-secondary">New</span></h6>
 	<img src="https://www.cheto.io/data/image/QSG2H31BSCH92D8RXRUR.png" id="imageGalleryImg" alt="" style="display: block;">
